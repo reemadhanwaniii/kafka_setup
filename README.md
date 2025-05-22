@@ -41,3 +41,25 @@
    Just FYI : data i produce , and how it stored it in partitions
    <img width="755" alt="image" src="https://github.com/user-attachments/assets/92d7246d-eec9-44cf-b6b3-dae422ce9f3c" />
 
+
+10. Create consumer group "group-A" with 3 consumer and assign each consumer of group 1 partition of topic pratice-topic with 3 partitions
+     kafka-console-consumer \
+  --bootstrap-server broker:29092 \
+  --topic practice-topic \
+  --partition 0 \
+  --group groupA \
+  --from-beginning
+
+kafka-console-consumer \
+  --bootstrap-server broker:29092 \
+  --topic practice-topic \
+  --partition 1 \
+  --group groupA \
+  --from-beginning
+
+kafka-console-consumer \
+  --bootstrap-server broker:29092 \
+  --topic practice-topic \
+  --partition 2 \
+  --group groupA \
+  --from-beginning
